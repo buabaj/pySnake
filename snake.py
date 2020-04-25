@@ -7,11 +7,14 @@ delay = 0.1
 # Score
 score=0
 high_score=0
+bg_color = input('input background color: ')
+snake_col = input('input snake color: ')
+food_col = input('input food color: ')
 
 # set up the screen
 wn=turtle.Screen()
 wn.title("Python Snake Game")
-wn.bgcolor("black")
+wn.bgcolor(bg_color)
 wn.setup(width=600, height=600)
 wn.tracer(0)
 
@@ -28,7 +31,7 @@ head.direction="stop"
 food=turtle.Turtle()
 food.speed(0)
 food.shape("circle")
-food.color("red")
+food.color(food_col)
 food.penup()
 food.goto(0,100)
 
@@ -125,7 +128,7 @@ while True:
         new_segment=turtle.Turtle()
         new_segment.speed(0)
         new_segment.shape("square")
-        new_segment.color("green")
+        new_segment.color(snake_col)
         new_segment.penup()
         segments.append(new_segment)
 
